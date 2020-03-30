@@ -1,2 +1,27 @@
+
+<div class="row">
+    <div class="col-xs-6">
+        <label>Server Name</label>
+        <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+        <input type="text" class="form-control" [(ngModel)]="serverName">
+        <p style="height:20px"> {{ serverName }} </p>
+    </div>
+    <div class="col-xs-6">
+
+    </div>
+</div>
+<button class="btn btn-primary" [disabled]="!allowAddServer" (click)="onCreateServer()">Add Server</button>
+<p [innerHtml]="allowAddServer"></p>
+<p><span style="background-color: yellow;">{{ serverCreateStatus }}</span></p>
 <app-server></app-server>
 <app-server></app-server>
+<br>
+
+<form>
+    <fieldset>
+        <legend> Assignment 2:- Practicing Databinding:</legend>
+        <input type="text" name="username" [(ngModel)]="username">
+        <p style="height:20px"> {{ username }} </p>
+        <button class="btn btn-warning" [disabled]="username.trim()==''" (click)="onClearUsername()">Clear username</button>
+    </fieldset>
+</form>

@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServerComponent implements OnInit {
 
-  constructor() { }
+  serverId: number = 11;
+  serverStatus: string = 'offline';
 
   ngOnInit(): void {
+  }
+
+  getServerstatus(){
+    return this.serverStatus;
   }
 
 }
